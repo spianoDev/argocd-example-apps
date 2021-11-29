@@ -5,7 +5,7 @@ metadata:
 spec:
     syncWindows:
         - kind: allow
-          schedule: '* * * * *'
+          schedule: '0/2 * * * *'
           duration: 1h
           applications:
               - '*'
