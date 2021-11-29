@@ -1,8 +1,8 @@
-apiVerson: argoproj.io/v1alpha1
+apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
     name: myapp-argo-app
-    namespace: argocd
+    namespace: unsupervised-argocd
 spec:
     project: default
     # This is the git repo where the argo application code lives
@@ -15,7 +15,7 @@ spec:
         server: https://kubernetes.default.svc
         namespace: myapp
     syncPolicy:
-        snycOptions:
+        syncOptions:
         - CreateNamespace=true
     # This is to automate the syncing which is default set to false. Pulls will happen every 3 minutes
         automated:
