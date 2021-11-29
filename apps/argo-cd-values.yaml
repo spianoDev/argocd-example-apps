@@ -1,0 +1,24 @@
+controller:
+    args:
+        appResyncPeriod: "30"
+    extraArgs:
+        - --app-state-cache-expiration
+        - 1s
+        - --default-cache-expiration
+        - 1s
+server:
+    extraArgs:
+        - --app-state-cache-expiration
+        - 1s
+        - --default-cache-expiration
+        - 1s
+        - --oidc-cache-expiration
+        - 1s
+repoServer:
+    extraArgs:
+        - --default-cache-expiration
+        - 1s
+        - --repo-cache-expiration
+        - 1s
+        - --revision-cache-expiration
+        - 1s
