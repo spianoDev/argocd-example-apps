@@ -3,7 +3,7 @@ kind: Application
 metadata:
     finalizers:
         - resources-finalizer.argocd.argoproj.io
-    name: argo-cd
+    name: argocd
 spec:
     destination:
         namespace: unsupervised-argocd
