@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-    name: default
+    name: argo-cd
 spec:
     syncWindows:
         - kind: allow
           schedule: '0/2 * * * *'
           duration: 1h
           applications:
-              - 'guestbook.yaml'
+              - '*'
           manualSync: true
 #        - kind: deny
 #          schedule: '0 22 * * *'
