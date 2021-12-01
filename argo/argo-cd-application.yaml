@@ -14,7 +14,7 @@ spec:
         helm:
             valueFiles:
                 - >-
-                    https://{{github_pac}}@raw.githubusercontent.com/spianoDev/argocd-example-apps/apps/argo-cd-values.yaml
+                    https://{{github_pac}}@raw.githubusercontent.com/spianoDev/argocd-example-apps/argo/argo-cd-values.yaml
         repoURL: >-
             https://argoproj.github.io/argo-helm
         targetRevision: '3.24.0'
