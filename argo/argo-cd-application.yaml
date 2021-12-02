@@ -3,10 +3,10 @@ kind: Application
 metadata:
     finalizers:
         - resources-finalizer.argocd.argoproj.io
-    name: argocd
+    name: argo-cd
 spec:
     destination:
-        namespace: argocd
+        namespace: unsupervised-argocd
         server: 'https://kubernetes.default.svc'
     project: default
     source:
@@ -26,7 +26,7 @@ spec:
                 server:
                     additionalProjects:
                         - name: default
-                          namespace: argocd
+                          namespace: unsupervised-argocd
                           description: Sync Windows Test
                           sourceRepos:
                               - '*'
@@ -38,7 +38,7 @@ spec:
                                 kind: '*'
                           syncWindows:
                               - kind: allow
-                                schedule: '0/2 * * * *'
+                                schedule: '25 * * * *'
                                 duration: 1h
                                 applications:
                                     - '*'
@@ -60,7 +60,7 @@ spec:
                         - 1s
         repoURL: >-
             https://argoproj.github.io/argo-helm
-        targetRevision: '3.24.0'
+        targetRevision: '3.26.0'
     syncPolicy:
         automated:
             selfHeal: true
