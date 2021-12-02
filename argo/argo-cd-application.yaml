@@ -38,7 +38,7 @@ spec:
                                 kind: '*'
                           syncWindows:
                               - kind: allow
-                                schedule: '* * * * *'
+                                schedule: '0/2 * * * *'
                                 duration: 1h
                                 applications:
                                     - '*'
@@ -60,7 +60,7 @@ spec:
                         - 1s
         repoURL: >-
             https://argoproj.github.io/argo-helm
-        targetRevision: '3.26.0'
+        targetRevision: '3.24.0'
     syncPolicy:
         automated:
             selfHeal: true
