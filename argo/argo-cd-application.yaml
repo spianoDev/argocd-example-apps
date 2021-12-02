@@ -24,6 +24,25 @@ spec:
                         - --default-cache-expiration
                         - 1s
                 server:
+                    additionalProjects:
+                        - name: default
+                          namespace: unsupervised-argocd
+                          description: Sync Windows Test
+                          sourceRepos:
+                              - '*'
+                          destinations:
+                              - namespace: '*'
+                                server: '*'
+                          clusterResourceWhitelist:
+                              - group: '*'
+                                kind: '*'
+                          syncWindows:
+                              - kind: allow
+                                schedule: '* * * * *'
+                                duration: 1h
+                                applications:
+                                    - '*'
+                                manualSync: true
                     extraArgs:
                         - --app-state-cache-expiration
                         - 1s
