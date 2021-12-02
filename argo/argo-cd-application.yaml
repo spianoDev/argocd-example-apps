@@ -6,7 +6,7 @@ metadata:
     name: argocd
 spec:
     destination:
-        namespace: unsupervised-argocd
+        namespace: argocd
         server: 'https://kubernetes.default.svc'
     project: default
     source:
@@ -26,7 +26,7 @@ spec:
                 server:
                     additionalProjects:
                         - name: default
-                          namespace: unsupervised-argocd
+                          namespace: argocd
                           description: Sync Windows Test
                           sourceRepos:
                               - '*'
@@ -60,7 +60,7 @@ spec:
                         - 1s
         repoURL: >-
             https://argoproj.github.io/argo-helm
-        targetRevision: '3.24.0'
+        targetRevision: '3.26.0'
     syncPolicy:
         automated:
             selfHeal: true
