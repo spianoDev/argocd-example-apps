@@ -38,7 +38,7 @@ spec:
                                 kind: '*'
                           syncWindows:
                               - kind: allow
-                                schedule: '25 * * * *'
+                                schedule: '35 14 * * *'
                                 duration: 1h
                                 applications:
                                     - '*'
