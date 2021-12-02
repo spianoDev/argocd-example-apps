@@ -3,7 +3,7 @@ kind: Application
 metadata:
     finalizers:
         - resources-finalizer.argocd.argoproj.io
-    name: argocd-test-change
+    name: argocd
 spec:
     destination:
         namespace: argocd
